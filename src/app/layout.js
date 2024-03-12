@@ -2,6 +2,7 @@ import { Rubik } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer/Footer";
+import "../../public/css/all.css"
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -24,7 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${rubik.variable} font-rubik bg-light`}>
         <NavBar />
-        <main className="font-rubik flex min-h-screen flex-col px-24">
+        <main className="font-rubik flex min-h-screen flex-col px-24 mt-10">
           {children}
         </main>
         <Footer/>

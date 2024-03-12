@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import Logo from "../Logo/Logo";
+import "../../../public/css/style.css"
 
 const CustomLink = ({ href, title, className }) => {
   // const router = useRouter();
@@ -39,7 +40,7 @@ const CustomLightDarkThemeIcon = ({ image, alt }) => {
 const NavBar = () => {
   return (
     <header className="w-full px-32 py-4 font-medium flex justify-between items-center">
-      <nav className="space-x-10">
+      <nav className="tektur-regular space-x-10 ">
         <CustomLink href="/" title="Home" className="mx-4"/>
         <CustomLink href="/profile" title="Profile" className="mx-4"/>
         <CustomLink href="/projects" title="Projects" className="mx-4"/>

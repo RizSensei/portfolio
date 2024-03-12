@@ -1,12 +1,13 @@
 import React from 'react'
+import "../../../public/css/style.css"
 
 const Footer = () => {
   return (
-    <div className="w-full px-5 p-10 border-t-2 border-solid border-dark">
-        <div className="flex justify-between text-lg font-medium">
-            <h1>{new Date().getFullYear()} &copy; All Rights Reserved.</h1>
-            <h1 className='flex justify-center items-center'>Made with <iconify-icon icon="ant-design:heart-filled"></iconify-icon> by <span className='underline'> Next14</span></h1>
-            <h1>I'm secretly a <span className='text-red-500'>SpiderMan</span></h1>
+    <div className="w-full p-5">
+        <div className="flex justify-center text-lg font-medium">
+            {/* <h1>{new Date().getFullYear()} &copy; All Rights Reserved.</h1> */}
+            {/* <h1 className='flex justify-center items-center'>Made with <iconify-icon icon="ant-design:heart-filled"></iconify-icon> by <span className='underline'> Next14</span></h1> */}
+            <h1 className='tektur-regular'>I'm secretly a <span className='text-darkPurple'>SpiderMan</span></h1>
         </div>
     </div>
   )

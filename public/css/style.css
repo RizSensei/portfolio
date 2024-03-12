@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&family=Tektur:wght@400..900&display=swap');
+
+.tektur-regular {
+    font-family: "Tektur", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+  }
+  
