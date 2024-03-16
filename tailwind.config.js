@@ -24,6 +24,20 @@ module.exports = {
         primary: "#B63E96", // 240,86,199
         primaryDark: "#58E6D9", // 80,230,217
         darkPurple: "#3b0764" 
+    },
+    keyframes: {
+      liquid: {
+        '0%, 100%': { borderRadius: '63% 37% 54% 46% / 55% 48% 52% 45%' },
+        '14%': { borderRadius: '40% 60% 54% 46% / 49% 60% 40% 51%' },
+        '28%': { borderRadius: '54% 46% 38% 62% / 49% 70% 30% 51%' },
+        '42%': { borderRadius: '61% 39% 55% 45% / 61% 38% 62% 39%' },
+        '56%': { borderRadius: '61% 39% 67% 33% / 70% 50% 50% 30%' },
+        '70%': { borderRadius: '50% 50% 34% 66% / 56% 68% 32% 44%' },
+        '84%': { borderRadius: '46% 54% 50% 50% / 35% 61% 39% 65%' },
+      }
+    },
+    animation: {
+      'moving-liquid' : 'liquid 5s linear infinite alternate'
     }
     },
   },
