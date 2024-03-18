@@ -6,7 +6,7 @@ const DataCount = ({ number, title }) => {
   return (
     <Bento>
       <div className="text-center flex flex-col items-center gap-3">
-        <Bento bgColor={false} style="w-max">
+        <Bento bgColor={false} style="w-max text-4xl">
           <AnimatedNumbers value={number} />
         </Bento>
         

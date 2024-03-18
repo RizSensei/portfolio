@@ -2,6 +2,7 @@ import Footer from "@/components/Footer/Footer";
 import SideRoute from "@/components/SideRoute/SideRoute";
 import { Rubik } from "next/font/google";
 import "./globals.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -14,6 +15,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en">
       <head>
@@ -22,13 +24,12 @@ export default function RootLayout({ children }) {
           async
         ></script>
       </head>
-      <body 
-      className={`${rubik.variable} font-rubik bg-black relative`}>
-        <SideRoute/>
-        <main className="font-rubik flex min-h-screen flex-col px-24 mt-10">
-          {children}
-        </main>
-        <Footer/>
+      <body className={`${rubik.variable} font-rubik bg-black relative`}>
+          <SideRoute />
+          <main className="font-rubik flex min-h-screen flex-col px-10 md:px-16 lg:px-24 mt-10">
+            {children}
+          </main>
+          <Footer />
       </body>
     </html>
   );

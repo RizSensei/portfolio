@@ -14,6 +14,7 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        circularLight : 'repeating-radial-gradient(#fff 2px, #000 5px, #000 100px)'
       },
       fontFamily: {
         rubik : ['var(--font-rubik)', ...fontFamily.sans],
@@ -23,7 +24,7 @@ module.exports = {
         light: "#f5f5f5",
         primary: "#B63E96", // 240,86,199
         primaryDark: "#58E6D9", // 80,230,217
-        darkPurple: "#3b0764" 
+        darkPurple: "#7e22ce" 
     },
     keyframes: {
       liquid: {

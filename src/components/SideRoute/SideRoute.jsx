@@ -8,20 +8,19 @@ const MotionLink = motion(Link);
 const RouteLink = ({ href, icon, tooltip }) => {
   return (
     <MotionLink href={href} className="group relative bg-darkPurple text-white py-1.5 px-2"
-    whileHover={{
-      scale: 1.1
-    }}>
-      <iconify-icon icon={icon} width="24px"></iconify-icon>
+    >
+      <iconify-icon icon={icon} width="24px" className="hover:scale-105"></iconify-icon>
     </MotionLink>
   );
 };
 
 const SideRoute = () => {
   return (
-    <div className="fixed z-10 top-1/2 right-0 -translate-y-1/2 cursor-pointer">
+    <div className="hidden md:block fixed z-10 top-1/2 right-0 -translate-y-1/2 cursor-pointer">
       <div className="flex flex-col gap-0.5">
         <RouteLink href="#home" icon="ion:home" tooltip="Home"/>
         <RouteLink href="#profile" icon="raphael:user" tooltip="User-Info"/>
+        <RouteLink href="#skills" icon="game-icons:solar-system" tooltip="Skills"/>
         <RouteLink href="#" icon="material-symbols:work-update" tooltip="Projects"/>
         <RouteLink href="#" icon="uiw:mail" tooltip="Contact"/>
       </div>

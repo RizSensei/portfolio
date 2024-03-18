@@ -4,7 +4,7 @@ import ProgressBar from "../../Basic/ProgressBar";
 
 const ToolsProgressBar = () => {
   const tools = [
-    { name: "ReactJS", progress: 50 },
+    { name: "ReactJS", progress: 20 },
     { name: "Figma", progress: 30 },
     { name: "Tailwind", progress: 80 },
     { name: "NextJS", progress: 10 },

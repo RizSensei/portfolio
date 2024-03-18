@@ -7,7 +7,7 @@ const GithubGrid = () => {
     <Bento>
         <CustomSocialLink
           href="#"
-          icon="skill-icons:github-light"
+          icon="codicon:github"
           tooltip="Github"
         />
         <h1>RizSensei</h1>

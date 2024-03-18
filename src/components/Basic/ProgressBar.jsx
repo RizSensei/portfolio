@@ -12,7 +12,7 @@ const ProgressBar = ({ tool, progress }) => {
     <main className="text-sm">
       <h1 className="font-semibold text-start">{tool}</h1>
       <div className="flex gap-2 items-center">
-        <div className="w-72 rounded-md bg-white border-black overflow-hidden">
+        <div className="w-60 md:w-72 rounded-md bg-white border-black overflow-hidden">
           <motion.div
            ref={ref}
             className="h-4 bg-darkPurple"
