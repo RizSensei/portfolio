@@ -23,6 +23,8 @@ const SideRoute = () => {
         <RouteLink href="#skills" icon="game-icons:solar-system" tooltip="Skills"/>
         <RouteLink href="#" icon="material-symbols:work-update" tooltip="Projects"/>
         <RouteLink href="#" icon="uiw:mail" tooltip="Contact"/>
+        <RouteLink href="./admin" icon="eos-icons:admin" tooltip="Admin"/>
+        <RouteLink href="./" icon="icon-park-solid:back" tooltip="Back To Home"/>
       </div>
     </div>
   );

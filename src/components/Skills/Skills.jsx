@@ -33,7 +33,7 @@ const skillLists = [
     icon: "vscode-icons:file-type-reactjs",
   },
   { name: "Figma", x: "-30vw", y: "0vh", icon: "devicon:figma" },
-  { name: "Tailwind CSS", x: "20vw", y: "-15vh", icon: "devicon:tailwindcss" },
+  { name: "Tailwind CSS", x: "10vw", y: "-10vh", icon: "devicon:tailwindcss" },
   { name: "Material UI", x: "10vw", y: "10vh", icon: "logos:material-ui" },
   { name: "NextJS", x: "-10vw", y: "10vh", icon: "logos:nextjs-icon" },
   { name: "Framer Motion", x: "30vw", y: "0vh", icon: "devicon:framermotion" },

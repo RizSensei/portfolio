@@ -1,8 +1,11 @@
 import Footer from "@/components/Footer/Footer";
 import SideRoute from "@/components/SideRoute/SideRoute";
 import { Rubik } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Provider from "@/providers/Provider";
+import ContextProvider from "@/providers/ContextProvider";
 
 const rubik = Rubik({
   subsets: ["latin"],
@@ -15,7 +18,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <head>
@@ -25,11 +27,16 @@ export default function RootLayout({ children }) {
         ></script>
       </head>
       <body className={`${rubik.variable} font-rubik bg-black relative`}>
-          <SideRoute />
-          <main className="font-rubik flex min-h-screen flex-col px-10 md:px-16 lg:px-24 mt-10">
-            {children}
-          </main>
-          <Footer />
+        <Provider>
+          <ContextProvider>
+            <SideRoute />
+            <main className="font-rubik flex min-h-screen flex-col px-10 md:px-16 lg:px-24 mt-10">
+              {children}
+            </main>
+            <ToastContainer position="bottom-right" autoClose={3000} />
+            <Footer />
+          </ContextProvider>
+        </Provider>
       </body>
     </html>
   );

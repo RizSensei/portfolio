@@ -35,7 +35,7 @@ const Projects = () => {
         <div className="w-full grid grid-cols-3 gap-0">
           {projects.map((project, i) => {
           return( 
-          <motion.div key={i} className="h-60 w-full border-2 border-gray-200/20 bg-black cursor-pointer"
+          <motion.div key={i} className="h-64 2xl:h-96 w-full border-2 border-gray-200/20 bg-black cursor-pointer"
            whileHover={{
             scale: 1.1,
             zIndex: 10,

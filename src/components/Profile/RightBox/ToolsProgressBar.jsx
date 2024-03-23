@@ -7,7 +7,9 @@ const ToolsProgressBar = () => {
     { name: "ReactJS", progress: 20 },
     { name: "Figma", progress: 30 },
     { name: "Tailwind", progress: 80 },
-    { name: "NextJS", progress: 10 },
+    { name: "NextJS", progress: 5 },
+    { name: "Material UI", progress: 30 },
+    { name: "Framer Motion", progress: 5 },
   ];
   return (
     <main className="flex flex-col gap-5">
