@@ -4,48 +4,70 @@ const profileSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
     },
     email: {
       type: String,
-      required: true,
+      // required: true,
     },
     tagLine: {
       type: String,
-      required: true,
+      // required: true,
     },
     footerLine: {
       type: String,
-      required: true,
+      // required: true,
     },
     role: {
       type: String,
-      required: true,
+      // required: true,
     },
     experience: {
-      type: String,
-      required: true,
+      type: Number,
+      // required: true,
     },
     facebook: {
       type: String,
-      required: true,
+      // required: true,
     },
     instagram: {
       type: String,
-      required: true,
+      // required: true,
     },
     discord: {
       type: String,
-      required: true,
+      // required: true,
     },
     github: {
       type: String,
-      required: true,
+      // required: true,
     },
     linkedin: {
       type: String,
-      required: true,
+      // required: true,
     },
+    skill: {
+      skillName:{
+        type: String,
+        // required: true
+      },
+      skillIcon:{
+        type: String,
+        // required: true
+      },
+      skillProgress:{
+        type: Number,
+        // required: true
+      },
+      X:{
+        type: Number,
+        // required: true
+      },
+      Y:{
+        type: Number,
+        // required: true
+      },
+    }
   },
   {
     timestamps: true,

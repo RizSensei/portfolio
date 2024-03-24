@@ -11,7 +11,7 @@ const ContextProvider = ({ children }) => {
     queryKey: ["profile"],
     queryFn: () => getProfileInfo(),
   });
-  console.log(profile)
+  // console.log(profile)
 
   return <ProfileContext.Provider value={{ profile }}>{children}</ProfileContext.Provider>;
 };
