@@ -46,7 +46,7 @@ const profileSchema = new Schema(
       type: String,
       // required: true,
     },
-    skill: {
+    skill: [{
       skillName:{
         type: String,
         // required: true
@@ -67,7 +67,7 @@ const profileSchema = new Schema(
         type: Number,
         // required: true
       },
-    }
+    }]
   },
   {
     timestamps: true,

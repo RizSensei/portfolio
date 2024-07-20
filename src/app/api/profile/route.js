@@ -15,7 +15,7 @@ export async function POST(request) {
     discord,
     github,
     linkedin,
-    skill : { skillName, skillIcon, skillProgress, X, Y},
+    skill : [{ skillName, skillIcon, skillProgress, X, Y}],
   } = await request.json();
   await connectDB();
   await Profile.create({
@@ -30,13 +30,13 @@ export async function POST(request) {
     discord,
     github,
     linkedin,
-    skill: {
+    skill:[{
       skillName,
       skillIcon,
       skillProgress,
       X,
       Y,
-    },
+    }],
   });
   return NextResponse.json({ message: "Profile Created" }, { status: 201 });
 }

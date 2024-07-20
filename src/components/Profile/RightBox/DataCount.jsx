@@ -7,7 +7,9 @@ const DataCount = ({ number, title }) => {
     <Bento>
       <div className="text-center flex flex-col items-center gap-3">
         <Bento bgColor={false} style="w-max text-4xl">
-          <AnimatedNumbers value={number} />
+          {
+            number !== 0 ? <AnimatedNumbers value={number} /> : 0
+          }
         </Bento>
         
         <p className="text-sm tektur-regular">{title}</p>

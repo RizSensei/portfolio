@@ -1,6 +1,6 @@
 "use client";
-import "../../../public/css/style.css";
-import FormProfile from "./components/FormProfile";
+import "@@/css/style.css";
+import FormProfile from "@/app/admin/components/FormProfile";
 
 const page = () => {
 

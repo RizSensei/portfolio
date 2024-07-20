@@ -23,13 +23,15 @@ const FormProfile = () => {
     discord: "",
     github: "",
     linkedin: "",
-    skill: [{
-      skillName: "",
-      skillIcon: "",
-      skillProgress: "",
-      X: "",
-      Y: "",
-    }],
+    skill: [
+      {
+        skillName: "",
+        skillIcon: "",
+        skillProgress: "",
+        X: "",
+        Y: "",
+      },
+    ],
   };
 
   const profileReducer = (state, action) => {
@@ -38,19 +40,18 @@ const FormProfile = () => {
         return {
           ...state,
           [action.field]: action.value,
-          skill: state.skill
-            ? {
-                ...state.skill,
-                [action.field]: action.value,
-              }
-            : null,
+          skill: state.skill.map((skill, index) =>
+            index === parseInt(skillIndex)
+              ? { ...skill, [skillField]: action.value }
+              : skill
+          ),
         };
 
-        case "ADD_SKILL":
-          return{
-            ...state,
-            skill: [...state.skill, action.newSkillField]
-          }
+      case "ADD_SKILL":
+        return {
+          ...state,
+          skill: [...state.skill, action.newSkillField],
+        };
       default:
         return state;
     }
@@ -64,7 +65,6 @@ const FormProfile = () => {
   };
 
   const addSkill = () => {
-    console.log("Adding skill");
     let newSkillField = {
       skillName: "",
       skillIcon: "",
@@ -72,8 +72,8 @@ const FormProfile = () => {
       X: "",
       Y: "",
     };
-    console.log(state)
-    dispatch({ type: "ADD_SKILL", newSkillField})
+    console.log(state);
+    dispatch({ type: "ADD_SKILL", newSkillField });
   };
 
   const handleSubmit = async (e) => {
@@ -90,10 +90,9 @@ const FormProfile = () => {
       discord,
       github,
       linkedin,
-      skill: { skillName, skillIcon, skillProgress, X, Y },
+      skill: [{ skillName, skillIcon, skillProgress, X, Y }],
     } = state;
-    console.log(state);
-
+console.log(state)
     try {
       const res = await fetch("http://localhost:3000/api/profile", {
         method: "POST",
@@ -112,13 +111,15 @@ const FormProfile = () => {
           discord,
           github,
           linkedin,
-          skill: {
-            skillName,
-            skillIcon,
-            skillProgress,
-            X,
-            Y,
-          },
+          skill: [
+            {
+              skillName,
+              skillIcon,
+              skillProgress,
+              X,
+              Y,
+            },
+          ],
         }),
       });
       if (res.ok) {
@@ -241,65 +242,61 @@ const FormProfile = () => {
           </button>
         </div>
 
-        <div className="relative  mb-2 w-full rounded-lg overflow-hidden flex gap-5">
-          <div className="w-full grid grid-cols-5 gap-x-2">
-            <InputField
-              structure={false}
-              inputWidth={false}
-              label="Skill"
-              type="text"
-              name="skillName"
-              icon="ic:round-drive-file-rename-outline"
-              value={state.skill.skillName}
-              onChange={handleChange}
-            />
-            <InputField
-              structure={false}
-              inputWidth={false}
-              label="Icon"
-              type="text"
-              name="skillIcon"
-              icon="tdesign:file-icon"
-              value={state.skill.skillIcon}
-              onChange={handleChange}
-            />
-            <InputField
-              structure={false}
-              inputWidth={false}
-              label="Progress"
-              type="number"
-              name="skillProgress"
-              icon="carbon:in-progress"
-              value={state.skill.skillProgress}
-              onChange={handleChange}
-            />
-            <InputField
-              structure={false}
-              inputWidth={false}
-              label="X-coordinates"
-              type="number"
-              name="X"
-              icon="iconoir:x-coordinate"
-              value={state.skill.X}
-              onChange={handleChange}
-            />
-            <InputField
-              structure={false}
-              inputWidth={false}
-              label="Y-coordinates"
-              type="number"
-              name="Y"
-              icon="iconoir:y-coordinate"
-              value={state.skill.Y}
-              onChange={handleChange}
-            />
-            {/* <button
-              type="button"
-              className="bg-red-500 w-max px-3 py-2 rounded-md h-max flex flex-col items-center justify-center"
-            >
-              <iconify-icon icon="material-symbols:delete"></iconify-icon>
-            </button> */}
-          </div>
+        <div className="relative  mb-2 w-full rounded-lg overflow-hidden flex flex-col gap-5">
+          {state?.skill?.map((item, index) => {
+            return (
+              <div key={index} className="w-full grid grid-cols-5 gap-x-2">
+                <InputField
+                  label="Skill"
+                  type="text"
+                  name="skillName"
+                  icon="ic:round-drive-file-rename-outline"
+                  value={item.skillName}
+                  onChange={handleChange}
+                />
+                <InputField
+                  label="Icon"
+                  type="text"
+                  name="skillIcon"
+                  icon="tdesign:file-icon"
+                  value={item.skillIcon}
+                  onChange={handleChange}
+                />
+                <InputField
+                  label="Progress"
+                  type="number"
+                  name="skillProgress"
+                  icon="carbon:in-progress"
+                  value={item.skillProgress}
+                  onChange={handleChange}
+                />
+                <InputField
+                  label="X-coordinates"
+                  type="number"
+                  name="X"
+                  icon="iconoir:x-coordinate"
+                  value={item.X}
+                  onChange={handleChange}
+                />
+                <InputField
+                  label="Y-coordinates"
+                  type="number"
+                  name="Y"
+                  icon="iconoir:y-coordinate"
+                  value={item.Y}
+                  onChange={handleChange}
+                />
+                <div className="h-full flex flex-col justify-between">
+                  <button
+                    type="button"
+                    className="bg-red-500 w-max px-3 py-2 rounded-md h-max flex flex-col items-center justify-center"
+                  >
+                    <iconify-icon icon="material-symbols:delete"></iconify-icon>
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
 
