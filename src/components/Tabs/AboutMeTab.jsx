@@ -1,31 +1,10 @@
 "use-client";
-import React from "react";
 import Button from "@/components/Basic/Button";
-import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
-import Bento from "../Basic/Bento";
 
-const quote = {
-  initial: {
-    opacity: 0,
-  },
-  animate: {
-    opacity: 1,
-    transition: {
-      delay: 0.3,
-      ease: "easeOut",
-    },
-  },
-};
-
-const Home_Right = () => {
+const AboutMeTab = () => {
   return (
-    <motion.div
-      className="w-full md:w-1/2 flex flex-col space-y-5 md:space-y-10"
-      variants={quote}
-      initial="initial"
-      animate="animate"
-    >
+    <div className="w-full flex flex-col space-y-5">
       <h1 className="tektur-regular text-darkPurple text-3xl md:text-4xl font-bold capitalize">
         Turning Vision into Reality with Design & Code
       </h1>
@@ -56,11 +35,10 @@ const Home_Right = () => {
         responsive websites.
       </div>
       <div className="flex gap-1">
-        <Button text="Resume"/>
-        <Bento><iconify-icon icon="line-md:downloading-loop" height="24px" width="24px"></iconify-icon></Bento>
+        <Button text="Download CV" />
       </div>
-    </motion.div>
+    </div>
   );
 };
 
-export default Home_Right;
+export default AboutMeTab;
