@@ -1,7 +1,7 @@
 "use client";
 import Example from "@/components/HeadlessTabs/HeadlessTabs";
 import Home_Left from "@/components/Home/Home_Left";
-import "../../public/css/style.css";
+import "@@/css/style.css";
 
 export default function Home() {
   return (

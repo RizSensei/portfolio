@@ -1,8 +1,8 @@
 import { Tab } from "@headlessui/react";
-import AboutMeTab from "../Tabs/AboutMeTab";
-import ContactMeTab from "../Tabs/ContactMeTab";
-import ProjectsTab from "../Tabs/ProjectsTab";
-import SkillsTab from "../Tabs/SkillsTab";
+import AboutMeTab from "@/components/Tabs/AboutMeTab";
+import ContactMeTab from "@/components/Tabs/ContactMeTab";
+import ProjectsTab from "@/components/Tabs/ProjectsTab";
+import SkillsTab from "@/components/Tabs/SkillsTab";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
