@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className={`${rubik.variable} font-rubik bg-black relative`}>
         <main className="font-rubik flex min-h-screen h-full flex-col px-10 md:px-16 lg:px-24 2xl:px-40 pt-5">
           <div className="h-full flex-grow flex flex-col item-center justify-center">
-            <div class="h-full w-full">
+            <div className="h-full w-full">
               {children}
             </div>
           </div>
