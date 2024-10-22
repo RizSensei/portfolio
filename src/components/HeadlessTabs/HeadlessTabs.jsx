@@ -17,7 +17,7 @@ export default function Example() {
   ];
 
   return (
-    <div className="w-full px-2 pt-10 sm:px-0">
+    <div className="w-full 2xl:max-w-3xl px-2 pt-10 sm:px-0">
       <Tab.Group>
         <Tab.List className="flex space-x-1 rounded-xl bg-darkPurple p-1">
           {tabs.map((tab, idx) => (

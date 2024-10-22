@@ -22,7 +22,7 @@ const ProjectsTab = () => {
         }
     ]
   return (
-    <div>ProjectsTab</div>
+    <div className='text-white'>Coming Soon</div>
   )
 }
 
